@@ -17,3 +17,7 @@ python main.py --type GAN --epochs 200 --zdim 64 --lr 0.00001 --batch 128 --hidd
 
 ### Results
 ![title](Results/GAN_Result.gif "Created images") ![](Results/GAN_Loss.png "Training Loss")
+<p float="left">
+  <img src="Results/GAN_Result.gif width="100" />
+  <img src="Results/GAN_Loss.png" width="100" /> 
+</p>
