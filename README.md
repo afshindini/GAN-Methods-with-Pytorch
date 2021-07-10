@@ -10,7 +10,7 @@ The loss function used in this method is BCE according to which G tends to maxim
 You can find the main approach in [Generative Adversarial Nets](https://arxiv.org/pdf/1406.2661.pdf).
 
 ### Run the code
-you can run GAN method by:
+Run GAN method with following settings:
 ```
 python main.py --type GAN --epochs 200 --zdim 64 --lr 0.00001 --batch 128 --hidden_dim 128
 ```
