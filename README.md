@@ -1,0 +1,2 @@
+# Generative Adversarial Network (GAN) and its developments with pytorch
+In this repository, GAN approach and its further developments are implemented and gathered together from different research papers. You can find a short description of the method, link to the related paper, the implemented code and the results in each section. In order to run each implementation, you can run the code, presented in each section. 
