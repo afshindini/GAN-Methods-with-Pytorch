@@ -20,3 +20,24 @@ python main.py --type GAN --epochs 200 --zdim 64 --lr 0.00001 --batch 128 --hidd
   <img src="Results/GAN_Result.gif" title="Created images" width="400" height="400"/>
   <img src="Results/GAN_Loss.png" alt="test" title="Training Loss" width="400" height="400"/> 
 </p>
+
+
+## Deep Convolutional Generative Adversarial Network (DCGAN)
+### Description
+This method is similar to GAN, however the main difference, compared to GAN, is that convolutional layers are used in both generator and discriminator networks instead of dense layers. The other parameters such as loss function are similar to GAN.
+
+### Reference
+You can find this method in [Unsupervised Representation Learning With Deep Convolutional Generative Adversarial Networks](https://arxiv.org/pdf/1511.06434.pdf).
+
+### Run the code
+Run DCGAN method, considering the appropriate settings, with the following command:
+```
+python main.py --type DCGAN --epochs 50 --zdim 64 --lr 0.0002 --batch 128 --hidden_dim 64
+```
+
+### Results
+<p align="center">
+  <img src="Results/DCGAN_Result.gif" title="Created images" width="400" height="400"/>
+  <img src="Results/DCGAN_Loss.png" alt="test" title="Training Loss" width="400" height="400"/> 
+</p>
+
