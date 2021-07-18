@@ -1,8 +1,8 @@
-from DCGAN.DCGAN_main import DCGAN_main
-from GAN.GAN_main import GAN_main
-from WGAN_GP.WGAN_GP_main import WGAN_GP_main
-from WGAN.WGAN_main import WGAN_main
-from SN_DCGAN.SN_DCGAN_main import SN_DCGAN_main
+from Methods.DCGAN.DCGAN_main import DCGAN_main
+from Methods.GAN.GAN_main import GAN_main
+from Methods.WGAN_GP.WGAN_GP_main import WGAN_GP_main
+from Methods.WGAN.WGAN_main import WGAN_main
+from Methods.SN_DCGAN.SN_DCGAN_main import SN_DCGAN_main
 from option import option
 
 opt = option().parse()
