@@ -1,5 +1,5 @@
 from option import option
-from SN_DCGAN.SN_DCGAN import Generator, Discriminator
+from Methods.DCGAN.DCGAN import Generator, Discriminator
 from torch.utils.data import DataLoader
 from torchvision import transforms
 from torchvision.datasets import MNIST
@@ -10,7 +10,7 @@ from tqdm import tqdm
 import time
 
 
-def SN_DCGAN_main():
+def DCGAN_main():
     # Initial Values
     opt = option().parse()
     criterion = nn.BCEWithLogitsLoss()
@@ -45,7 +45,7 @@ def SN_DCGAN_main():
         # These losses used for calculating the loss of each epoch by taking the mean of losses of batches in one epoch
         D_losses = []
         G_losses = []
-        epoch_start_time = time.time()
+        epoch_start_time = time.time()  # Used for recording the elapsed time for each epoch
 
         # Dataloader returns the batches
         for real, _ in tqdm(dataloader):
@@ -65,7 +65,7 @@ def SN_DCGAN_main():
             # Calculate the total discriminator loss
             disc_loss = (disc_fake_loss + disc_real_loss) / 2
             # Keep track of the discriminator loss in each batch
-            D_losses.append(disc_loss.item())
+            D_losses.append(disc_loss)
             # Update gradients for discriminator
             disc_loss.backward(retain_graph=True)
             disc_opt.step()
@@ -81,7 +81,7 @@ def SN_DCGAN_main():
             gen_loss.backward()
             gen_opt.step()
             # Keep track of the generator loss in each batch
-            G_losses.append(gen_loss.item())
+            G_losses.append(gen_loss)
 
         epoch_end_time = time.time()
         per_epoch_ptime = epoch_end_time - epoch_start_time

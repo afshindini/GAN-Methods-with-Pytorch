@@ -1,5 +1,5 @@
 from option import option
-from WGAN_GP.WGAN_GP import Generator, Critic, gradient_penalty, generator_loss, critic_loss
+from Methods.WGAN_GP.WGAN_GP import Generator, Critic, gradient_penalty, generator_loss, critic_loss
 from torch.utils.data import DataLoader
 from torchvision import transforms
 from torchvision.datasets import MNIST

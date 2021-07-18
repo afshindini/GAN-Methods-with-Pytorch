@@ -1,5 +1,5 @@
 from option import option
-from GAN.GAN import Generator, Discriminator
+from Methods.GAN.GAN import Generator, Discriminator
 from torch.utils.data import DataLoader
 from torchvision import transforms
 from torchvision.datasets import MNIST

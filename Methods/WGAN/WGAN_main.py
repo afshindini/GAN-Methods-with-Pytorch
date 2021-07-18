@@ -1,5 +1,5 @@
 from option import option
-from WGAN.WGAN import Generator, Critic, generator_loss, critic_loss
+from Methods.WGAN.WGAN import Generator, Critic, generator_loss, critic_loss
 from torch.utils.data import DataLoader
 from torchvision import transforms
 from torchvision.datasets import MNIST
