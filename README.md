@@ -1,5 +1,5 @@
 # Generative Adversarial Network (GAN) and Its Developments with Pytorch
-In this repository, GAN approach and its further developments are implemented and gathered together from different research papers. You can find a short description of each method, link to the related paper, the implemented code and the results in each section. In order to run each implementation, you can run the code, presented in each section separatly.
+In this repository, GAN approach and its further developments are implemented and gathered together from different research papers. You can find a short description of each method, link to the related paper, the implemented code and the results in each section. In order to run each implementation, you can run the code, presented in each section separatly. All the methods are applied to [MNIST](http://yann.lecun.com/exdb/mnist/) dataset right now, I will try to apply them on other datasets in the near future.
 
 ## Generative Adversarial Network (GAN)
 ### Description
@@ -79,4 +79,24 @@ python main.py --type WGAN_GP --epochs 100 --zdim 64 --lr 0.0002 --batch 128 --h
 <p align="center">
   <img src="Results/WGAN_GP_Result.gif" title="Created images" width="400" height="400"/>
   <img src="Results/WGAN_GP_Loss.png" alt="test" title="Training Loss" width="400" height="400"/>
+</p>
+
+## Spectrally Normalized Deep Convolutional GAN (SN-DCGAN)
+### Description
+This method is similar to DCGAN, however, SN_DCGAN normalizes the weight matrices in the discriminator by their corresponding spectral norm, which helps control the Lipschitz constant of the discriminator. In general, spectral normalization helps improve stability and avoid vanishing gradient problems, such as mode collapse. It is also good to know that you can use spectral normalization with any type of GAN methods and in this part it is used with DCGAN.
+
+
+### Reference
+You can find the main approach in [Spectral Normalization for Generative Adversarial Networks](https://arxiv.org/pdf/1802.05957.pdf).
+
+### Run the code
+Run WGAN-GP method with following settings:
+```
+python main.py --type SN_DCGAN --epochs 50 --zdim 64 --lr 0.0002 --batch 128 --hidden_dim 64
+```
+
+### Results
+<p align="center">
+  <img src="Results/SN_DCGAN_Result.gif" title="Created images" width="400" height="400"/>
+  <img src="Results/SN_DCGAN_Loss.png" alt="test" title="Training Loss" width="400" height="400"/>
 </p>
