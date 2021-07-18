@@ -15,5 +15,7 @@ elif opt.type == 'WGAN_GP':
     WGAN_GP_main()
 elif opt.type == 'WGAN':
     WGAN_main()
-else:
+elif opt.type == 'SN_DCGAN':
     SN_DCGAN_main()
+else:
+    print("The type is not correct")
