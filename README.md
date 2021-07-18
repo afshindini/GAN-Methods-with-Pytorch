@@ -90,7 +90,7 @@ This method is similar to DCGAN, however, SN_DCGAN normalizes the weight matrice
 You can find the main approach in [Spectral Normalization for Generative Adversarial Networks](https://arxiv.org/pdf/1802.05957.pdf).
 
 ### Run the code
-Run WGAN-GP method with following settings:
+Run SN-DCGAN method with following settings:
 ```
 python main.py --type SN_DCGAN --epochs 50 --zdim 64 --lr 0.0002 --batch 128 --hidden_dim 64
 ```
